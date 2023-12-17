@@ -29,21 +29,25 @@ const Drawerr = ({drawerWidth, setMode, noneORBlock, drawerType, hideDrawer}) =>
 
     const myList = [
         {
+            id: 1,
             text: "Home",
             icon: <HomeIcon/>,
             path: "/"
         },
         {
+            id: 2,
             text: "Create",
             icon: <CreateIcon/>,
             path: "/create"
         },
         {
+            id: 3,
             text: "Profile",
             icon: <PersonIcon/>,
             path: "/"
         },
         {
+            id: 4,
             text: "Settings",
             icon: <SettingsIcon/>,
             path: "/create"
