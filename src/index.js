@@ -9,6 +9,7 @@ import ErrorPage from "./routes/ErrorPage";
 import TaskCreate from "./routes/Tasks/TaskCreate";
 import {Provider} from "react-redux";
 import store from './store'
+import TaskInfo from "./routes/Tasks/TaskInfo";
 // routing
 
 const routes = createBrowserRouter([
@@ -23,6 +24,9 @@ const routes = createBrowserRouter([
             }, {
                 path: "create",
                 element: <TaskCreate/>
+            }, {
+                path: ":id/info",
+                element: <TaskInfo/>
             },
         ]
     }

@@ -11,7 +11,7 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import Grid from "@mui/material/Grid";
 import {IconButton} from "@mui/material";
-import {Close} from "@mui/icons-material";
+import {Close, Visibility} from "@mui/icons-material";
 
 const TaskList = ({tasks, dispatch, deleteTask, navigate}) => {
     return (
@@ -35,7 +35,12 @@ const TaskList = ({tasks, dispatch, deleteTask, navigate}) => {
                                             <IconButton
                                                 onClick={() =>  dispatch(deleteTask(task))}
                                                 sx={{position: "absolute", top: "0", right: "0"}}>
-                                                <Close sx={{fontSize: "20px"}}/>
+                                                <Close sx={{fontSize: "30px"}}/>
+                                            </IconButton>
+                                            <IconButton
+                                                onClick={() =>  navigate(`${task.id}/info`)}
+                                                sx={{position: "absolute", top: "0", right: "40px"}}>
+                                                <Visibility sx={{fontSize: "30px"}}/>
                                             </IconButton>
                                         </CardContent>
 

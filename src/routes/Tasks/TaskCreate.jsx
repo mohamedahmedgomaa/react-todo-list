@@ -14,17 +14,12 @@ const TaskCreate = () => {
 
     const handleFormSubmit = (e) => {
         e.preventDefault();
-
         const data = {
             id: crypto.randomUUID(),
             text: title,
         };
-
         dispatch(createTask(data));
-
-        // Clear the form
         setTitle('');
-
         navigate('/');
     };
 
@@ -34,7 +29,7 @@ const TaskCreate = () => {
                 <form onSubmit={handleFormSubmit}>
                     <TextField
                         fullWidth
-                        label="Add Task to Group 1"
+                        label="Text"
                         variant="outlined"
                         required
                         value={title}
