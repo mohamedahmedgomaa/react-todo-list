@@ -1,7 +1,7 @@
 import React, {useState,useMemo} from "react";
 import {Outlet} from "react-router-dom";
 import Appbar from "../MUI-components/Appbar";
-import Drawerr from "../MUI-components/Drawerr";
+import DrawerBar from "../MUI-components/DrawerBar";
 import {Box, createTheme, CssBaseline} from "@mui/material";
 import {ThemeProvider} from '@mui/material/styles';
 import getDesignTokens from "../styles/MyTheme";
@@ -35,9 +35,9 @@ const Root = () => {
                 <CssBaseline/>
                 <Appbar drawerWidth={drawerWidth} showDrawer={showDrawer}/>
 
-                <Drawerr setMode={setMode} drawerWidth={drawerWidth} noneORBlock={noneORBlock} drawerType={drawerType} hideDrawer={hideDrawer}/>
+                <DrawerBar setMode={setMode} drawerWidth={drawerWidth} noneORBlock={noneORBlock} drawerType={drawerType} hideDrawer={hideDrawer}/>
                 <Box component="main"
-                     sx={{ml: {sm: `${drawerWidth}px`}, display: "flex", justifyContent: "center", mt: "66px"}}>
+                     sx={{ml: {sm: `${drawerWidth + 20}px`}, display: "flex", mt: "30px", mr: "20px"}}>
                     <Outlet/>
                 </Box>
             </ThemeProvider>

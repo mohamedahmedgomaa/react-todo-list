@@ -18,7 +18,7 @@ import {useLocation, useNavigate} from "react-router-dom";
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
 
-const Drawerr = ({drawerWidth, setMode, noneORBlock, drawerType, hideDrawer}) => {
+const DrawerBar = ({drawerWidth, setMode, noneORBlock, drawerType, hideDrawer}) => {
     const navigate = useNavigate();
     const theme = useTheme();
     const currentLocation = useLocation();
@@ -58,12 +58,6 @@ const Drawerr = ({drawerWidth, setMode, noneORBlock, drawerType, hideDrawer}) =>
             <Drawer
                 sx={{
                     display: {xs: noneORBlock, sm: "block"},
-                    // [theme.breakpoints.down('md')]: {
-                    //     backgroundColor: theme.palette.secondary.main,
-                    // },
-                    // [theme.breakpoints.up('md')]: {
-                    //     backgroundColor: theme.palette.secondary.main,
-                    // },
                     width: `${drawerWidth}px`,
                     flexShrink: 0,
                     '& .MuiDrawer-paper': {
@@ -124,4 +118,4 @@ const Drawerr = ({drawerWidth, setMode, noneORBlock, drawerType, hideDrawer}) =>
     );
 }
 
-export default Drawerr;
+export default DrawerBar;

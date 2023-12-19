@@ -1,4 +1,4 @@
-import {cyan, deepPurple, grey} from "@mui/material/colors";
+import {grey} from "@mui/material/colors";
 
 
 const getDesignTokens = (mode) => ({
@@ -7,19 +7,13 @@ const getDesignTokens = (mode) => ({
         mode,
         ...(mode === 'light'
             ? {
-                moha: {
-                    main: deepPurple[600],
-                },
                 favColor: {
-                    main : grey[300]
+                    main: grey[300]
                 }
             }
             : {
-                moha: {
-                    main: cyan[700],
-                },
                 favColor: {
-                    main : grey[800]
+                    main: grey[800]
                 }
             }),
 
